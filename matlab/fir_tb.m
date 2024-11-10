@@ -1,5 +1,6 @@
 % Define fixed-point format for 16-bit signed integers (Q15 format)
 fixedPointFormat = numerictype(1, 16, 8);  % Signed, 16 bits, 15 fractional bits
+scalingFactor = 2^8;
 
 
 % For Coefficient
@@ -8,15 +9,21 @@ if C_file == -1
     error('Failed to open C.txt');
 end
 
-% C = fi(zeros(1, 64), fixedPointFormat);
-C = zeros(1, 64);
+C = zeros(1, 64, 'like', fi(0, fixedPointFormat));
 
 for i = 1:64
-    C(i) = fscanf(C_file, '%f', 1);
-    if isempty(C(i))
+    line = fscanf(C_file, '%s', 1);
+    if isempty(line)
         error('C.txt does not contain enough data (expected 64 lines)');
     end
-    % C(i) = fi(line, fixedPointFormat);
+    
+    decimalValue = bin2dec(line);
+
+    if line(1) == '1'
+        decimalValue = decimalValue - 2^16;
+    end
+    
+    C(i) = fi(decimalValue / scalingFactor, fixedPointFormat);
 end
 
 fclose(C_file);
@@ -41,12 +48,19 @@ coreEn = true;
 
 % Read inputs and run simulation
 while ~feof(inputFile)
-    d_in = fscanf(inputFile, '%f', 1);
+    d_in = fscanf(inputFile, '%s', 1);
     if isempty(d_in)
         break;
     end
 
-    % d_in = fi(d_in, fixedPointFormat);
+    d_in = bin2dec(d_in);
+
+    if d_in >= 2^15  % If the number is negative in two's complement
+        d_in = d_in - 2^16;  % Convert from unsigned to signed by subtracting 2^16
+    end
+
+    d_in = fi(d_in / scalingFactor, fixedPointFormat);
+
     [d_out, valid_out] = fir(coreEn, d_in, valid_in, rstn, C);
     rstn = false;
 
@@ -56,8 +70,6 @@ while ~feof(inputFile)
     else
         fprintf(outputFile, '0\n');
     end
-
-    break;
 end
 
 % Close files
