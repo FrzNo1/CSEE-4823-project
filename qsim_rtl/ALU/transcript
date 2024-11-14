@@ -1,0 +1,78 @@
+# do runsim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:45:54 on Nov 14,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/ALU/ALU.v 
+# -- Skipping module ALU
+# -- Skipping module multiplier
+# -- Compiling module addern
+# 
+# Top level modules:
+# 	ALU
+# End time: 16:45:54 on Nov 14,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:45:54 on Nov 14,2024
+# vlog -reportprogress 300 "+acc" -incr test_ALU.v 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:45:55 on Nov 14,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
+# vsim "+acc" -t ps -lib work testbench 
+# Start time: 16:45:55 on Nov 14,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.27.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.testbench
+# Loading work.ALU
+# Loading work.multiplier
+# Loading work.addern
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/ALU.multiplier_out'.
+# Executing ONERROR command at macro ./waveformat.do line 7
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/ALU.adder_out'.
+# Executing ONERROR command at macro ./waveformat.do line 8
+# Test 1: Resetting ALU
+# Test 2: X = 2, B = 3
+# Expected multiplier result: 2 * 3 = 6
+# Expected final result: 6 + 0 = 6
+# ALU Output y =            0
+# Test 3: X = 5, B = 4
+# Expected multiplier result: 5 * 4 = 20
+# Expected final result: 20 + 6 = 26
+# ALU Output y =            6
+# Test 4: X = 1, B = 1
+# Expected multiplier result: 1 * 1 = 1
+# Expected final result: 1 + 26 = 27
+# ALU Output y =           26
+# Test 5: X = 16, B = 3
+# Expected multiplier result: 16 * 3 = 48
+# Expected final result: 48 + 27 = 75
+# ALU Output y =           27
+# Test finished.
+# ** Note: $finish    : test_ALU.v(92)
+#    Time: 85 ns  Iteration: 1  Instance: /testbench
+# 1
+# Break in Module testbench at test_ALU.v line 92
+run
+run
+run
+run
+# End time: 16:48:53 on Nov 14,2024, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 1

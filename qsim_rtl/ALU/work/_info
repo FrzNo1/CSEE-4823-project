@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/user/stud/fall23/rf2715/FIR-Filter-Verilog/qsim_rtl/ALU
+vaddern
+Z1 2../../rtl/ALU/ALU.v
+!s110 1731620754
+!i10b 1
+!s100 W7h5P7FXDKd5R=Hc3okTQ1
+II:lSbC96iUFWAnHiUHb193
+R0
+w1731620729
+Z2 8../../rtl/ALU/ALU.v
+Z3 F../../rtl/ALU/ALU.v
+!i122 19
+L0 36 8
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OP;L;2024.2;79
+r1
+!s85 0
+31
+!s108 1731620754.000000
+Z6 !s107 ../../rtl/ALU/ALU.v|
+Z7 !s90 -reportprogress|300|+acc|-incr|../../rtl/ALU/ALU.v|
+!i113 1
+Z8 o+acc
+Z9 tCvgOpt 0
+vALU
+R1
+Z10 !s10a 1731620729
+!s110 1731619457
+!i10b 1
+!s100 2]]XjmgO9g@BcF^O`hUof3
+I5JO7J9h<eLkz@9ggVR;;j1
+R0
+w1731619441
+R2
+R3
+!i122 18
+L0 2 22
+R4
+R5
+r1
+!s85 0
+31
+!s108 1731619457.000000
+R6
+R7
+!i113 1
+R8
+R9
+n@a@l@u
+vmultiplier
+R1
+R10
+!s110 1731618468
+!i10b 1
+!s100 efWLUbPYnZLE^K<zo5MO@3
+IO^VlgZODh^Y:B8YXhC?8^1
+R0
+w1731618326
+R2
+R3
+!i122 14
+L0 26 8
+R4
+R5
+r1
+!s85 0
+31
+!s108 1731618467.000000
+R6
+R7
+!i113 1
+R8
+R9
+vtestbench
+2test_ALU.v
+!s10a 1731619188
+!s110 1731618680
+!i10b 1
+!s100 @kSHF]a@FHJN4c3aPJeKd3
+Ibg]CUQFV;>]IDef8a8RV]0
+R0
+w1731618658
+8test_ALU.v
+Ftest_ALU.v
+!i122 16
+L0 5 91
+R4
+R5
+r1
+!s85 0
+31
+!s108 1731618680.000000
+!s107 test_ALU.v|
+!s90 -reportprogress|300|+acc|-incr|test_ALU.v|
+!i113 1
+R8
+R9
