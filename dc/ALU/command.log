@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12-SP7 for linux64 -- Oct 10, 2023
-#@ # Date:   Thu Nov 14 17:06:21 2024
+#@ # Date:   Sun Nov 17 17:44:05 2024
 #@ # Run by: rf2715@cadpc01
 #@ 
 
@@ -8674,8 +8674,8 @@ source /tools/synopsys/syn/U-2022.12-SP7/admin/setup/.synopsys_dc.setup
 #@ 
 #@ # -- End source /tools/synopsys/syn/U-2022.12-SP7/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/dc/ALU/ALU.tcl
-#@ # -- Starting source /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/dc/ALU/ALU.tcl
+source -echo -verbose /homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/ALU/ALU.tcl
+#@ # -- Starting source /homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/ALU/ALU.tcl
 
 #@ set top_level ALU
 #@ source -verbose "../common_script/common.tcl"
@@ -8689,7 +8689,6 @@ source -echo -verbose /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/dc/ALU/A
 #@                        "/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db" \
 #@                        "dw_foundation.sldb"]
 #@ set target_library "/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
-#@ 
 #@ # -- End source ../common_script/common.tcl
 
 #@ read_verilog {../../rtl/ALU/ALU.v}

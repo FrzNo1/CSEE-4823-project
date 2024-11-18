@@ -5,28 +5,28 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 16:45:54 on Nov 14,2024
+# Start time: 17:31:35 on Nov 17,2024
 # vlog -reportprogress 300 "+acc" -incr ../../rtl/ALU/ALU.v 
 # -- Skipping module ALU
 # -- Skipping module multiplier
-# -- Compiling module addern
+# -- Skipping module addern
 # 
 # Top level modules:
 # 	ALU
-# End time: 16:45:54 on Nov 14,2024, Elapsed time: 0:00:00
+# End time: 17:31:35 on Nov 17,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
-# Start time: 16:45:54 on Nov 14,2024
+# Start time: 17:31:35 on Nov 17,2024
 # vlog -reportprogress 300 "+acc" -incr test_ALU.v 
 # -- Skipping module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 16:45:55 on Nov 14,2024, Elapsed time: 0:00:01
+# End time: 17:31:36 on Nov 17,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # ** Warning: (vsim-8690) Ignoring plusarg '+acc' with -novopt in effect.
 # vsim "+acc" -t ps -lib work testbench 
-# Start time: 16:45:55 on Nov 14,2024
+# Start time: 17:31:36 on Nov 17,2024
 # //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.27.1.el8_10.x86_64
 # //
 # // Unpublished work. Copyright 2024 Siemens
@@ -66,13 +66,9 @@
 # Expected final result: 48 + 27 = 75
 # ALU Output y =           27
 # Test finished.
-# ** Note: $finish    : test_ALU.v(92)
+# ** Note: $finish    : /user/stud/fall23/rf2715/FIR-Filter-Verilog/qsim_rtl/ALU/test_ALU.v(92)
 #    Time: 85 ns  Iteration: 1  Instance: /testbench
 # 1
-# Break in Module testbench at test_ALU.v line 92
-run
-run
-run
-run
-# End time: 16:48:53 on Nov 14,2024, Elapsed time: 0:02:58
+# Break in Module testbench at /user/stud/fall23/rf2715/FIR-Filter-Verilog/qsim_rtl/ALU/test_ALU.v line 92
+# End time: 17:32:02 on Nov 17,2024, Elapsed time: 0:00:26
 # Errors: 0, Warnings: 1

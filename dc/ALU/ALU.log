@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Thu Nov 14 17:06:23 2024
+Current time:       Sun Nov 17 17:44:07 2024
 Hostname:           cadpc01
 CPU Model:          11th Gen Intel(R) Core(TM) i9-11900 @ 2.50GHz
 CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 3.60 GHz
 OS:                 Linux 4.18.0-553.27.1.el8_10.x86_64
-RAM:                 62 GB (Free  28 GB)
+RAM:                 62 GB (Free   7 GB)
 Swap:                31 GB (Free  31 GB)
 Work Filesystem:    /homes mounted to auto.homes
 Tmp Filesystem:     /tmp mounted to tmpfs
-Work Disk:          18974 GB (Free 6843 GB)
+Work Disk:          18974 GB (Free 6818 GB)
 Tmp Disk:            31 GB (Free  31 GB)
 
-CPU Load: 61%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6843 GB, Tmp Disk Free: 31 GB
+CPU Load: 78%, Ram Free: 7 GB, Swap Free: 31 GB, Work Disk Free: 6818 GB, Tmp Disk Free: 31 GB
 set top_level ALU
 ALU
 source -verbose "../common_script/common.tcl"
@@ -51,30 +51,29 @@ dw_foundation.sldb
 /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
 /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
 read_verilog {../../rtl/ALU/ALU.v}
-Loading db file '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'
 Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
 Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb'
 Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/gtech.db'
 Loading db file '/tools/synopsys/syn/U-2022.12-SP7/libraries/syn/standard.sldb'
-  Loading link library 'USERLIB'
   Loading link library 'scx3_cmos8rf_lpvt_tt_1p2v_25c'
   Loading link library 'gtech'
-Loading verilog file '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.v'
+Loading verilog file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.v'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.v
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Compiling source file /homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.v
 
 Inferred memory devices in process
 	in routine ALU line 17 in file
-		'/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.v'.
+		'/homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |        y_reg        | Flip-flop |  39   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.db:ALU'
+Current design is now '/homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.db:ALU'
 Loaded 3 designs.
 Current design is 'ALU'.
 ALU multiplier addern
@@ -91,12 +90,12 @@ current_design ALU
 Current design is 'ALU'.
 {ALU}
 link
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 
   Linking design 'ALU'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (3 designs)               /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.db, etc
-  USERLIB (library)           /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db
+  * (3 designs)               /homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.db, etc
   scx3_cmos8rf_lpvt_tt_1p2v_25c (library) /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
   dw_foundation.sldb (library) /tools/synopsys/syn/U-2022.12-SP7/libraries/syn/dw_foundation.sldb
 
@@ -106,7 +105,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Thu Nov 14 17:06:24 2024
+Date:        Sun Nov 17 17:44:08 2024
 ****************************************
 
                    Name                                            Total
@@ -201,7 +200,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Thu Nov 14 17:06:24 2024
+Date:        Sun Nov 17 17:44:08 2024
 ****************************************
 
                    Name                                            Total
@@ -228,12 +227,12 @@ current_design ALU
 Current design is 'ALU'.
 {ALU}
 link
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 
   Linking design 'ALU'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (3 designs)               /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/rtl/ALU/ALU.db, etc
-  USERLIB (library)           /homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db
+  * (3 designs)               /homes/user/stud/fall23/rf2715/CSEE-4823-project/rtl/ALU/ALU.db, etc
   scx3_cmos8rf_lpvt_tt_1p2v_25c (library)
                               /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db
   dw_foundation.sldb (library)
@@ -241,10 +240,12 @@ link
 
 1
 compile_ultra
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Information: Performing leakage power optimization. (PWR-850)
-CPU Load: 65%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6843 GB, Tmp Disk Free: 31 GB
+CPU Load: 78%, Ram Free: 8 GB, Swap Free: 31 GB, Work Disk Free: 6818 GB, Tmp Disk Free: 31 GB
 Analyzing: "/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
 Library analysis succeeded.
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
@@ -286,21 +287,27 @@ Information: There are 9 potential problems in your design. Please run 'check_de
 
   Simplifying Design 'ALU'
 
-Warning: The trip points for the library named USERLIB differ from those in the library named scx3_cmos8rf_lpvt_tt_1p2v_25c. (TIM-164)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Loaded alib file './alib-52/scx3_cmos8rf_lpvt_tt_1p2v_25c.db.alib'
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
   Building model 'DW01_NAND2'
 Information: Ungrouping hierarchy multiplier before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy adder before Pass 1 (OPT-776)
 Information: Ungrouping 2 of 3 hierarchies before Pass 1 (OPT-775)
-CPU Load: 65%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6842 GB, Tmp Disk Free: 31 GB
+CPU Load: 81%, Ram Free: 7 GB, Swap Free: 31 GB, Work Disk Free: 6827 GB, Tmp Disk Free: 31 GB
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'ALU'
  Implement Synthetic for 'ALU'.
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
-CPU Load: 65%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6842 GB, Tmp Disk Free: 31 GB
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+CPU Load: 81%, Ram Free: 6 GB, Swap Free: 31 GB, Work Disk Free: 6827 GB, Tmp Disk Free: 31 GB
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -309,7 +316,13 @@ Information: The target library(s) contains cell(s), other than black boxes, tha
 
   Beginning Mapping Optimizations  (Ultra High effort)
   -------------------------------
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
   Mapping Optimization (Phase 1)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
 
                                   TOTAL                                                            
@@ -317,12 +330,12 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
     0:00:09   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
-    0:00:10   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
+    0:00:09   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
 
   Beginning Constant Register Removal
   -----------------------------------
-    0:00:10   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
-    0:00:10   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
+    0:00:09   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
+    0:00:09   22788.0      0.00       0.0   28403.3                           34885.4766      0.00  
 
   Beginning Global Optimizations
   ------------------------------
@@ -365,19 +378,21 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
   Beginning Delay Optimization
   ----------------------------
     0:00:11   12265.9      2.66      16.2   30034.4                           16828.8340      0.00  
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
   Mapping 'ALU_DP_OP_6J1_122_7014_3'
 Information: Added key list 'DesignWare' to design 'ALU'. (DDB-72)
-    0:00:12   15048.0      1.16       6.6   30027.7                           20808.1855      0.00  
-    0:00:12   15048.0      1.16       6.6   30027.7                           20808.1855      0.00  
-    0:00:13   15241.0      0.70       3.9   26941.5                           21191.3906      0.00  
-    0:00:13   15154.6      0.77       4.1   26934.9                           21090.1562      0.00  
-    0:00:13   15154.6      0.77       4.1   26934.9                           21090.1562      0.00  
+    0:00:11   15048.0      1.16       6.6   30027.7                           20808.1855      0.00  
+    0:00:11   15048.0      1.16       6.6   30027.7                           20808.1855      0.00  
+    0:00:12   15241.0      0.70       3.9   26941.5                           21191.3906      0.00  
+    0:00:12   15154.6      0.77       4.1   26934.9                           21090.1562      0.00  
+    0:00:12   15154.6      0.77       4.1   26934.9                           21090.1562      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:14   14424.5      0.65       2.4   26656.8                           19999.4590      0.00  
-    0:00:14   14474.9      0.00       0.0   26021.5                           20096.0098      0.00  
-    0:00:14   14474.9      0.00       0.0   26021.5                           20096.0098      0.00  
+    0:00:13   14424.5      0.65       2.4   26656.8                           19999.4590      0.00  
+    0:00:13   14474.9      0.00       0.0   26021.5                           20096.0098      0.00  
+    0:00:13   14474.9      0.00       0.0   26021.5                           20096.0098      0.00  
     0:00:14   14028.5      0.00       0.0   25971.3                           19358.3926      0.00  
     0:00:14   14028.5      0.00       0.0   25971.3                           19358.3926      0.00  
     0:00:14   14028.5      0.00       0.0   25971.3                           19358.3926      0.00  
@@ -410,8 +425,8 @@ Information: Added key list 'DesignWare' to design 'ALU'. (DDB-72)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -421,10 +436,10 @@ Information: Added key list 'DesignWare' to design 'ALU'. (DDB-72)
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
-    0:00:16   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
+    0:00:15   15291.4      0.00       0.0       0.0                           21070.2559      0.00  
     0:00:16   15037.9      0.00       0.0       0.0                           20655.7715      0.00  
     0:00:16   15037.9      0.00       0.0       0.0                           20655.7715      0.00  
     0:00:16   15037.9      0.00       0.0       0.0                           20655.7715      0.00  
@@ -450,19 +465,18 @@ Information: Added key list 'DesignWare' to design 'ALU'. (DDB-72)
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
     0:00:16   15037.9      0.00       0.0       0.0                           20655.7715      0.00  
+    0:00:16   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
+    0:00:16   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
+    0:00:16   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
     0:00:17   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
-    0:00:17   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
-    0:00:17   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
-    0:00:17   13734.7      0.00       0.0       0.0                           18663.2754      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
-    0:00:18   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
+    0:00:17   13494.2      0.00       0.0       0.0                           18452.7969      0.00  
     0:00:18   13387.7      0.00       0.0       0.0                           18300.5000      0.00  
-CPU Load: 65%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6842 GB, Tmp Disk Free: 31 GB
-Loading db file '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'
+CPU Load: 83%, Ram Free: 6 GB, Swap Free: 31 GB, Work Disk Free: 6832 GB, Tmp Disk Free: 31 GB
 Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
 
 
@@ -471,9 +485,10 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-CPU Load: 65%, Ram Free: 28 GB, Swap Free: 31 GB, Work Disk Free: 6842 GB, Tmp Disk Free: 31 GB
+CPU Load: 83%, Ram Free: 6 GB, Swap Free: 31 GB, Work Disk Free: 6832 GB, Tmp Disk Free: 31 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -499,6 +514,7 @@ Unmapped MV Cells
 #########################################
 source -verbose "../common_script/namingrules.tcl"
 1
+Warning: Can't read link_library file '../../memory/sram256w20b/sram256w20b_tt_1p2v_25c_syn.db'. (UID-3)
 
 Design          Type    Object                  New Name
 --------------------------------------------------------------------------------
@@ -939,13 +955,13 @@ ALU             net     n900                    n9001
 set verilogout_no_tri TRUE
 TRUE
 write -hierarchy -format verilog -output "${top_level}.nl.v"
-Writing verilog file '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/dc/ALU/ALU.nl.v'.
+Writing verilog file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/ALU/ALU.nl.v'.
 1
 write_sdc "${top_level}.syn.sdc" -version 1.7
 1
 write_sdf "${top_level}.syn.sdf"
 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/homes/user/stud/fall23/rf2715/FIR-Filter-Verilog/dc/ALU/ALU.syn.sdf'. (WT-3)
+Information: Writing timing information to file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/ALU/ALU.syn.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 1
 set maxpaths 20
@@ -968,9 +984,9 @@ report_timing -delay max -nworst 1 -max_paths 10000 -path end -nosplit -unique -
 report_timing -delay min -nworst 1 -max_paths 10000 -path short -nosplit -unique -sort_by slack > ${top_level}.syn.fast_path
 quit
 
-Memory usage for this session 257 Mbytes.
-Memory usage for this session including child processes 257 Mbytes.
-CPU usage for this session 136 seconds ( 0.04 hours ).
-Elapsed time for this session 145 seconds ( 0.04 hours ).
+Memory usage for this session 256 Mbytes.
+Memory usage for this session including child processes 256 Mbytes.
+CPU usage for this session 143 seconds ( 0.04 hours ).
+Elapsed time for this session 150 seconds ( 0.04 hours ).
 
 Thank you...
