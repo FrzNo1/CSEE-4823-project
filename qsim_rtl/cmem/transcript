@@ -1,0 +1,66 @@
+# do runsim.do
+# Model Technology ModelSim DE vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Copying /tools/mentor/ModelSim/2024.2/modelsim_dlx/linuxpe/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 19:44:04 on Nov 24,2024
+# vlog -reportprogress 300 "+acc" -incr ../../rtl/cmem/cmem.v 
+# -- Compiling module cmem
+# 
+# Top level modules:
+# 	cmem
+# End time: 19:44:04 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 19:44:04 on Nov 24,2024
+# vlog -reportprogress 300 "+acc" -incr ../../mem_comp/RF1SHD.v 
+# -- Compiling module RF1SHD
+# 
+# Top level modules:
+# 	RF1SHD
+# End time: 19:44:05 on Nov 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim DE vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 19:44:05 on Nov 24,2024
+# vlog -reportprogress 300 "+acc" -incr ./tb_cmem.v 
+# ** Warning: ./tb_cmem.v(21): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./tb_cmem.v(22): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:44:05 on Nov 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vsim -c -t ps -lib work testbench 
+# Start time: 19:44:05 on Nov 24,2024
+# //  ModelSim DE 2024.2 May 20 2024 Linux 4.18.0-553.27.1.el8_10.x86_64
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading work.testbench
+# Loading work.cmem
+# Loading work.RF1SHD
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/Q'.
+# Executing ONERROR command at macro ./waveformat.do line 11
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/DUT.Q'.
+# Executing ONERROR command at macro ./waveformat.do line 13
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/DUT.WENI'.
+# Executing ONERROR command at macro ./waveformat.do line 17
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/testbench/DUT.CENI'.
+# Executing ONERROR command at macro ./waveformat.do line 18
+# ** Note: $finish    : ./tb_cmem.v(99)
+#    Time: 10290 ns  Iteration: 1  Instance: /testbench
+# 1
+# Break in Module testbench at ./tb_cmem.v line 99
+# End time: 20:13:12 on Nov 24,2024, Elapsed time: 0:29:07
+# Errors: 0, Warnings: 0

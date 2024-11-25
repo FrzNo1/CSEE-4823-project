@@ -1,0 +1,56 @@
+6:19:36 PM - ARM Physical IP, Inc.
+6:19:36 PM - Linux cadpc01 4.18.0-553.27.1.el8_10.x86_64 #1 SMP Fri Oct 18 06:18:15 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+6:19:36 PM - Version 2008Q3V1
+6:19:36 PM - GUI version 5.6.13
+6:19:36 PM - 
+6:19:36 PM - CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+6:19:36 PM - 
+6:19:36 PM - Copyright (c) 1993 - 2024 ARM Physical IP, Inc.  All Rights Reserved.
+6:19:36 PM - 
+6:19:36 PM - Use of this Software is subject to the terms and conditions of the
+6:19:36 PM - applicable license agreement with ARM Physical IP, Inc. 
+6:19:36 PM - In addition, this Software is protected by patents, copyright law 
+6:19:36 PM - and international treaties.
+6:19:36 PM - 
+6:19:36 PM - The copyright notice(s) in this Software does not indicate actual or
+6:19:36 PM - intended publication of this Software.
+6:19:36 PM - 
+6:19:36 PM - High Speed/Density Single Port Register File Generator, IBM CMRF8SF-LPVT Process
+6:19:36 PM - 
+6:19:36 PM - Log file is ACI.log
+6:19:36 PM - 
+6:19:49 PM - ASCII Datatable updated
+6:20:04 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd postscript -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:04 PM - PostScript Datasheet generator succeeded, created:
+6:20:04 PM -    RF1SHD.ps
+6:20:04 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd ascii -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:04 PM - ASCII Datatable generator succeeded, created:
+6:20:04 PM -    RF1SHD.dat
+6:20:05 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd verilog -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:05 PM - Verilog Model generator succeeded, created:
+6:20:05 PM -    RF1SHD.v
+6:20:05 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd vhdl -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:05 PM - VHDL Model generator succeeded, created:
+6:20:05 PM -    RF1SHD.vhd
+6:20:06 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd synopsys -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -libname USERLIB -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:06 PM - Synopsys Model generator succeeded, created:
+6:20:06 PM -    RF1SHD_ff_1p32v_m55c_syn.lib
+6:20:06 PM -    RF1SHD_ff_1p65v_125c_syn.lib
+6:20:06 PM -    RF1SHD_tt_1p2v_25c_syn.lib
+6:20:06 PM -    RF1SHD_ss_1p08v_m55c_syn.lib
+6:20:06 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd primetime -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:07 PM - PrimeTime Model generator succeeded, created:
+6:20:07 PM -    RF1SHD_ff_1p32v_m55c.data
+6:20:07 PM -    RF1SHD_ff_1p65v_125c.data
+6:20:07 PM -    RF1SHD_tt_1p2v_25c.data
+6:20:07 PM -    RF1SHD_ss_1p08v_m55c.data
+6:20:07 PM -    RF1SHD.mod
+6:20:07 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd tlf -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -libname USERLIB -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:08 PM - TLF Model generator succeeded, created:
+6:20:08 PM -    RF1SHD_ff_1p32v_m55c.tlf
+6:20:08 PM -    RF1SHD_ff_1p65v_125c.tlf
+6:20:08 PM -    RF1SHD_tt_1p2v_25c.tlf
+6:20:08 PM -    RF1SHD_ss_1p08v_m55c.tlf
+6:20:09 PM - command: /courses/ee6321/share/mem_comp/rf1shd/bin/rf1shd vclef-fp -instname RF1SHD -words 256 -bits 20 -frequency 1 -ring_width 2.0 -mux 2 -write_mask off -wp_size 8 -top_layer "m6-m8_m4" -power_type rings -horiz met3 -vert met2 -cust_comment "" -bus_notation on -left_bus_delim "[" -right_bus_delim "]" -pwr_gnd_rename "VDD:VDD,GND:VSS" -prefix "" -pin_space 0.0 -name_case upper -check_instname on -diodes on -inside_ring_type GND -drive 4 -asvm on -inst2ring blockages -site_def off -corners ff_1p32v_m55c,ff_1p65v_125c,tt_1p2v_25c,ss_1p08v_m55c
+6:20:10 PM - VCLEF Footprint generator succeeded, created:
+6:20:10 PM -    RF1SHD.vclef

@@ -1,0 +1,538 @@
+ 
+****************************************
+Report : design
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
+    USERLIB (File: /homes/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.db)
+
+Local Link Library:
+
+    {scx3_cmos8rf_lpvt_tt_1p2v_25c.db, RF1SHD_tt_1p2v_25c_syn.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : tt_1p2v_25c
+    Library : scx3_cmos8rf_lpvt_tt_1p2v_25c
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.20
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+AI_reg[0]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[1]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[2]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[3]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[4]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[5]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[6]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+AI_reg[7]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[0]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[1]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[2]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[3]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[4]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[5]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[6]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+CADDRI_reg[7]             DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[0]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[1]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[2]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[3]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[4]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[5]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[6]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[7]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[8]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[9]                 DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[10]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[11]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[12]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[13]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[14]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[15]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[16]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[17]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[18]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+DI_reg[19]                DFFQX1TS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          24.480000 n
+SRAM_CORE                 RF1SHD          USERLIB         31681.761719
+                                                                    b, d
+U14                       OR2X1TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          7.200000  
+U15                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+U16                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+U17                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U18                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U19                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U20                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U21                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U22                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U23                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U24                       AO22XLTS        scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          10.080000 
+U25                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+U26                       CLKBUFX2TS      scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          5.760000  
+U27                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+U28                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+U29                       INVX2TS         scx3_cmos8rf_lpvt_tt_1p2v_25c
+                                                          4.320000  
+--------------------------------------------------------------------------------
+Total 53 cells                                            32682.561703
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+A0[0]          in      0.0000   0.0000    1.02    0.00   --         
+A0[1]          in      0.0000   0.0000    1.02    0.00   --         
+A0[2]          in      0.0000   0.0000    1.02    0.00   --         
+A0[3]          in      0.0000   0.0000    1.02    0.00   --         
+A0[4]          in      0.0000   0.0000    1.02    0.00   --         
+A0[5]          in      0.0000   0.0000    1.02    0.00   --         
+A0[6]          in      0.0000   0.0000    1.02    0.00   --         
+A0[7]          in      0.0000   0.0000    1.02    0.00   --         
+CADDR[0]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[1]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[2]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[3]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[4]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[5]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[6]       in      0.0000   0.0000    1.02    0.00   --         
+CADDR[7]       in      0.0000   0.0000    1.02    0.00   --         
+CEN            in      0.0000   0.0000    1.02    0.00   --         
+D[0]           in      0.0000   0.0000    1.02    0.00   --         
+D[1]           in      0.0000   0.0000    1.02    0.00   --         
+D[2]           in      0.0000   0.0000    1.02    0.00   --         
+D[3]           in      0.0000   0.0000    1.02    0.00   --         
+D[4]           in      0.0000   0.0000    1.02    0.00   --         
+D[5]           in      0.0000   0.0000    1.02    0.00   --         
+D[6]           in      0.0000   0.0000    1.02    0.00   --         
+D[7]           in      0.0000   0.0000    1.02    0.00   --         
+D[8]           in      0.0000   0.0000    1.02    0.00   --         
+D[9]           in      0.0000   0.0000    1.02    0.00   --         
+D[10]          in      0.0000   0.0000    1.02    0.00   --         
+D[11]          in      0.0000   0.0000    1.02    0.00   --         
+D[12]          in      0.0000   0.0000    1.02    0.00   --         
+D[13]          in      0.0000   0.0000    1.02    0.00   --         
+D[14]          in      0.0000   0.0000    1.02    0.00   --         
+D[15]          in      0.0000   0.0000    1.02    0.00   --         
+D[16]          in      0.0000   0.0000    1.02    0.00   --         
+D[17]          in      0.0000   0.0000    1.02    0.00   --         
+D[18]          in      0.0000   0.0000    1.02    0.00   --         
+D[19]          in      0.0000   0.0000    1.02    0.00   --         
+WEN            in      0.0000   0.0000    1.02    0.00   --         
+clk            in      0.0000   0.0000    1.02    0.00   --         
+Q0[0]          out     0.0050   0.0000   --      --      --         
+Q0[1]          out     0.0050   0.0000   --      --      --         
+Q0[2]          out     0.0050   0.0000   --      --      --         
+Q0[3]          out     0.0050   0.0000   --      --      --         
+Q0[4]          out     0.0050   0.0000   --      --      --         
+Q0[5]          out     0.0050   0.0000   --      --      --         
+Q0[6]          out     0.0050   0.0000   --      --      --         
+Q0[7]          out     0.0050   0.0000   --      --      --         
+Q0[8]          out     0.0050   0.0000   --      --      --         
+Q0[9]          out     0.0050   0.0000   --      --      --         
+Q0[10]         out     0.0050   0.0000   --      --      --         
+Q0[11]         out     0.0050   0.0000   --      --      --         
+Q0[12]         out     0.0050   0.0000   --      --      --         
+Q0[13]         out     0.0050   0.0000   --      --      --         
+Q0[14]         out     0.0050   0.0000   --      --      --         
+Q0[15]         out     0.0050   0.0000   --      --      --         
+Q0[16]         out     0.0050   0.0000   --      --      --         
+Q0[17]         out     0.0050   0.0000   --      --      --         
+Q0[18]         out     0.0050   0.0000   --      --      --         
+Q0[19]         out     0.0050   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+A0[0]              1      --              --              --        -- 
+A0[1]              1      --              --              --        -- 
+A0[2]              1      --              --              --        -- 
+A0[3]              1      --              --              --        -- 
+A0[4]              1      --              --              --        -- 
+A0[5]              1      --              --              --        -- 
+A0[6]              1      --              --              --        -- 
+A0[7]              1      --              --              --        -- 
+CADDR[0]           1      --              --              --        -- 
+CADDR[1]           1      --              --              --        -- 
+CADDR[2]           1      --              --              --        -- 
+CADDR[3]           1      --              --              --        -- 
+CADDR[4]           1      --              --              --        -- 
+CADDR[5]           1      --              --              --        -- 
+CADDR[6]           1      --              --              --        -- 
+CADDR[7]           1      --              --              --        -- 
+CEN                1      --              --              --        -- 
+D[0]               1      --              --              --        -- 
+D[1]               1      --              --              --        -- 
+D[2]               1      --              --              --        -- 
+D[3]               1      --              --              --        -- 
+D[4]               1      --              --              --        -- 
+D[5]               1      --              --              --        -- 
+D[6]               1      --              --              --        -- 
+D[7]               1      --              --              --        -- 
+D[8]               1      --              --              --        -- 
+D[9]               1      --              --              --        -- 
+D[10]              1      --              --              --        -- 
+D[11]              1      --              --              --        -- 
+D[12]              1      --              --              --        -- 
+D[13]              1      --              --              --        -- 
+D[14]              1      --              --              --        -- 
+D[15]              1      --              --              --        -- 
+D[16]              1      --              --              --        -- 
+D[17]              1      --              --              --        -- 
+D[18]              1      --              --              --        -- 
+D[19]              1      --              --              --        -- 
+WEN                1      --              --              --        -- 
+clk                1      --              --              --        -- 
+Q0[0]              1      --              --              --        -- 
+Q0[1]              1      --              --              --        -- 
+Q0[2]              1      --              --              --        -- 
+Q0[3]              1      --              --              --        -- 
+Q0[4]              1      --              --              --        -- 
+Q0[5]              1      --              --              --        -- 
+Q0[6]              1      --              --              --        -- 
+Q0[7]              1      --              --              --        -- 
+Q0[8]              1      --              --              --        -- 
+Q0[9]              1      --              --              --        -- 
+Q0[10]             1      --              --              --        -- 
+Q0[11]             1      --              --              --        -- 
+Q0[12]             1      --              --              --        -- 
+Q0[13]             1      --              --              --        -- 
+Q0[14]             1      --              --              --        -- 
+Q0[15]             1      --              --              --        -- 
+Q0[16]             1      --              --              --        -- 
+Q0[17]             1      --              --              --        -- 
+Q0[18]             1      --              --              --        -- 
+Q0[19]             1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+A0[0]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[1]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[2]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[3]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[4]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[5]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[6]         0.10    0.10    0.10    0.10  clk       4.00  
+A0[7]         0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[0]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[1]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[2]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[3]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[4]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[5]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[6]      0.10    0.10    0.10    0.10  clk       4.00  
+CADDR[7]      0.10    0.10    0.10    0.10  clk       4.00  
+CEN           0.10    0.10    0.10    0.10  clk       4.00  
+D[0]          0.10    0.10    0.10    0.10  clk       4.00  
+D[1]          0.10    0.10    0.10    0.10  clk       4.00  
+D[2]          0.10    0.10    0.10    0.10  clk       4.00  
+D[3]          0.10    0.10    0.10    0.10  clk       4.00  
+D[4]          0.10    0.10    0.10    0.10  clk       4.00  
+D[5]          0.10    0.10    0.10    0.10  clk       4.00  
+D[6]          0.10    0.10    0.10    0.10  clk       4.00  
+D[7]          0.10    0.10    0.10    0.10  clk       4.00  
+D[8]          0.10    0.10    0.10    0.10  clk       4.00  
+D[9]          0.10    0.10    0.10    0.10  clk       4.00  
+D[10]         0.10    0.10    0.10    0.10  clk       4.00  
+D[11]         0.10    0.10    0.10    0.10  clk       4.00  
+D[12]         0.10    0.10    0.10    0.10  clk       4.00  
+D[13]         0.10    0.10    0.10    0.10  clk       4.00  
+D[14]         0.10    0.10    0.10    0.10  clk       4.00  
+D[15]         0.10    0.10    0.10    0.10  clk       4.00  
+D[16]         0.10    0.10    0.10    0.10  clk       4.00  
+D[17]         0.10    0.10    0.10    0.10  clk       4.00  
+D[18]         0.10    0.10    0.10    0.10  clk       4.00  
+D[19]         0.10    0.10    0.10    0.10  clk       4.00  
+WEN           0.10    0.10    0.10    0.10  clk       4.00  
+clk           --      --      --      --      --      4.00
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+A0[0]        INVX1TS            INVX1TS              -- /  --     
+A0[1]        INVX1TS            INVX1TS              -- /  --     
+A0[2]        INVX1TS            INVX1TS              -- /  --     
+A0[3]        INVX1TS            INVX1TS              -- /  --     
+A0[4]        INVX1TS            INVX1TS              -- /  --     
+A0[5]        INVX1TS            INVX1TS              -- /  --     
+A0[6]        INVX1TS            INVX1TS              -- /  --     
+A0[7]        INVX1TS            INVX1TS              -- /  --     
+CADDR[0]     INVX1TS            INVX1TS              -- /  --     
+CADDR[1]     INVX1TS            INVX1TS              -- /  --     
+CADDR[2]     INVX1TS            INVX1TS              -- /  --     
+CADDR[3]     INVX1TS            INVX1TS              -- /  --     
+CADDR[4]     INVX1TS            INVX1TS              -- /  --     
+CADDR[5]     INVX1TS            INVX1TS              -- /  --     
+CADDR[6]     INVX1TS            INVX1TS              -- /  --     
+CADDR[7]     INVX1TS            INVX1TS              -- /  --     
+CEN          INVX1TS            INVX1TS              -- /  --     
+D[0]         INVX1TS            INVX1TS              -- /  --     
+D[1]         INVX1TS            INVX1TS              -- /  --     
+D[2]         INVX1TS            INVX1TS              -- /  --     
+D[3]         INVX1TS            INVX1TS              -- /  --     
+D[4]         INVX1TS            INVX1TS              -- /  --     
+D[5]         INVX1TS            INVX1TS              -- /  --     
+D[6]         INVX1TS            INVX1TS              -- /  --     
+D[7]         INVX1TS            INVX1TS              -- /  --     
+D[8]         INVX1TS            INVX1TS              -- /  --     
+D[9]         INVX1TS            INVX1TS              -- /  --     
+D[10]        INVX1TS            INVX1TS              -- /  --     
+D[11]        INVX1TS            INVX1TS              -- /  --     
+D[12]        INVX1TS            INVX1TS              -- /  --     
+D[13]        INVX1TS            INVX1TS              -- /  --     
+D[14]        INVX1TS            INVX1TS              -- /  --     
+D[15]        INVX1TS            INVX1TS              -- /  --     
+D[16]        INVX1TS            INVX1TS              -- /  --     
+D[17]        INVX1TS            INVX1TS              -- /  --     
+D[18]        INVX1TS            INVX1TS              -- /  --     
+D[19]        INVX1TS            INVX1TS              -- /  --     
+WEN          INVX1TS            INVX1TS              -- /  --     
+clk          INVX1TS            INVX1TS              -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+A0[0]         --      --     --      --     --      --     --     --        -- 
+A0[1]         --      --     --      --     --      --     --     --        -- 
+A0[2]         --      --     --      --     --      --     --     --        -- 
+A0[3]         --      --     --      --     --      --     --     --        -- 
+A0[4]         --      --     --      --     --      --     --     --        -- 
+A0[5]         --      --     --      --     --      --     --     --        -- 
+A0[6]         --      --     --      --     --      --     --     --        -- 
+A0[7]         --      --     --      --     --      --     --     --        -- 
+CADDR[0]      --      --     --      --     --      --     --     --        -- 
+CADDR[1]      --      --     --      --     --      --     --     --        -- 
+CADDR[2]      --      --     --      --     --      --     --     --        -- 
+CADDR[3]      --      --     --      --     --      --     --     --        -- 
+CADDR[4]      --      --     --      --     --      --     --     --        -- 
+CADDR[5]      --      --     --      --     --      --     --     --        -- 
+CADDR[6]      --      --     --      --     --      --     --     --        -- 
+CADDR[7]      --      --     --      --     --      --     --     --        -- 
+CEN           --      --     --      --     --      --     --     --        -- 
+D[0]          --      --     --      --     --      --     --     --        -- 
+D[1]          --      --     --      --     --      --     --     --        -- 
+D[2]          --      --     --      --     --      --     --     --        -- 
+D[3]          --      --     --      --     --      --     --     --        -- 
+D[4]          --      --     --      --     --      --     --     --        -- 
+D[5]          --      --     --      --     --      --     --     --        -- 
+D[6]          --      --     --      --     --      --     --     --        -- 
+D[7]          --      --     --      --     --      --     --     --        -- 
+D[8]          --      --     --      --     --      --     --     --        -- 
+D[9]          --      --     --      --     --      --     --     --        -- 
+D[10]         --      --     --      --     --      --     --     --        -- 
+D[11]         --      --     --      --     --      --     --     --        -- 
+D[12]         --      --     --      --     --      --     --     --        -- 
+D[13]         --      --     --      --     --      --     --     --        -- 
+D[14]         --      --     --      --     --      --     --     --        -- 
+D[15]         --      --     --      --     --      --     --     --        -- 
+D[16]         --      --     --      --     --      --     --     --        -- 
+D[17]         --      --     --      --     --      --     --     --        -- 
+D[18]         --      --     --      --     --      --     --     --        -- 
+D[19]         --      --     --      --     --      --     --     --        -- 
+WEN           --      --     --      --     --      --     --     --        -- 
+clk           --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+A0[0]         --      --      --      -- 
+A0[1]         --      --      --      -- 
+A0[2]         --      --      --      -- 
+A0[3]         --      --      --      -- 
+A0[4]         --      --      --      -- 
+A0[5]         --      --      --      -- 
+A0[6]         --      --      --      -- 
+A0[7]         --      --      --      -- 
+CADDR[0]      --      --      --      -- 
+CADDR[1]      --      --      --      -- 
+CADDR[2]      --      --      --      -- 
+CADDR[3]      --      --      --      -- 
+CADDR[4]      --      --      --      -- 
+CADDR[5]      --      --      --      -- 
+CADDR[6]      --      --      --      -- 
+CADDR[7]      --      --      --      -- 
+CEN           --      --      --      -- 
+D[0]          --      --      --      -- 
+D[1]          --      --      --      -- 
+D[2]          --      --      --      -- 
+D[3]          --      --      --      -- 
+D[4]          --      --      --      -- 
+D[5]          --      --      --      -- 
+D[6]          --      --      --      -- 
+D[7]          --      --      --      -- 
+D[8]          --      --      --      -- 
+D[9]          --      --      --      -- 
+D[10]         --      --      --      -- 
+D[11]         --      --      --      -- 
+D[12]         --      --      --      -- 
+D[13]         --      --      --      -- 
+D[14]         --      --      --      -- 
+D[15]         --      --      --      -- 
+D[16]         --      --      --      -- 
+D[17]         --      --      --      -- 
+D[18]         --      --      --      -- 
+D[19]         --      --      --      -- 
+WEN           --      --      --      -- 
+clk           --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+Q0[0]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[1]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[2]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[3]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[4]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[5]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[6]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[7]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[8]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[9]         0.10    0.10    0.10    0.10  clk       0.00  
+Q0[10]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[11]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[12]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[13]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[14]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[15]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[16]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[17]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[18]        0.10    0.10    0.10    0.10  clk       0.00  
+Q0[19]        0.10    0.10    0.10    0.10  clk       0.00  
+
+1
+Warning: The 'tt_1p2v_25c' library has not been read in yet. (UIL-3)
+0

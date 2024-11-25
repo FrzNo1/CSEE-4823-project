@@ -1,0 +1,17 @@
+#@ # 
+#@ # Running lc_shell Version U-2022.12-SP6 for linux64 -- Aug 08, 2023
+#@ # Date:   Sun Nov 24 20:02:34 2024
+#@ # Run by: rf2715@cadpc01
+#@ 
+
+set target_library "path/to/RF1SHD_tt_1p2v_25c_syn.lib"
+set target_library "/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.lib"
+write_lib -format db -output RF1SHD_tt_1p2v_25c_syn.db
+set target_library "/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.lib"
+read_lib "/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.lib"
+write_lib -format db -output RF1SHD_tt_1p2v_25c_syn.db RF1SHD_tt_1p2v_25c_syn
+list_lib
+write_lib -format db -output RF1SHD_tt_1p2v_25c_syn.db USERLIB
+eixt
+clear
+exit

@@ -1,0 +1,125 @@
+ 
+****************************************
+Report : area
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
+    USERLIB (File: /homes/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.db)
+
+Number of ports:                           59
+Number of nets:                           111
+Number of cells:                           53
+Number of combinational cells:             16
+Number of sequential cells:                36
+Number of macros/black boxes:               1
+Number of buf/inv:                          7
+Number of references:                       6
+
+Combinational area:                119.520000
+Buf/Inv area:                       31.680001
+Noncombinational area:             881.279984
+Macro/Black Box area:            31681.761719
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 32682.561703
+Total area:                 undefined
+1
+ 
+****************************************
+Report : compile_options
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+cmem                                     flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                                                buffer_constants
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : design
+Design : cmem
+Version: U-2022.12-SP7
+Date   : Sun Nov 24 20:10:30 2024
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    scx3_cmos8rf_lpvt_tt_1p2v_25c (File: /courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db)
+    USERLIB (File: /homes/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.db)
+
+Local Link Library:
+
+    {scx3_cmos8rf_lpvt_tt_1p2v_25c.db, RF1SHD_tt_1p2v_25c_syn.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : tt_1p2v_25c
+    Library : scx3_cmos8rf_lpvt_tt_1p2v_25c
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.20
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

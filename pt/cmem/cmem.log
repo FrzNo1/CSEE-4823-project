@@ -1,0 +1,144 @@
+
+                                 PrimeTime (R)
+
+               Version U-2022.12-SP5 for linux64 - Jul 14, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+set sh_enable_page_mode true
+false
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+##################################################
+# Set files and paths
+##################################################
+set top_level cmem
+cmem
+set search_path "/courses/ee6321/share/ibm13rflpvt/synopsys/ ../../mem_comp/"
+/courses/ee6321/share/ibm13rflpvt/synopsys/ ../../mem_comp/
+set link_path "* scx3_cmos8rf_lpvt_tt_1p2v_25c.db RF1SHD_tt_1p2v_25c_syn.db"
+* scx3_cmos8rf_lpvt_tt_1p2v_25c.db RF1SHD_tt_1p2v_25c_syn.db
+read_db "scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+1
+read_db "RF1SHD_tt_1p2v_25c_syn.db"
+Loading db file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/mem_comp/RF1SHD_tt_1p2v_25c_syn.db'
+1
+set verilog_files {../../dc/cmem/cmem.nl.v}
+../../dc/cmem/cmem.nl.v
+read_verilog $verilog_files
+1
+link_design $top_level
+Loading verilog file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/cmem/cmem.nl.v'
+Linking design cmem...
+Information: 522 (99.05%) library cells are unused in library scx3_cmos8rf_lpvt_tt_1p2v_25c..... (LNK-045)
+Information: total 522 library cells are unused (LNK-046)
+Design 'cmem' was successfully linked.
+Information: There are 113 leaf cells, ports, hiers and 111 nets in the design (LNK-047)
+1
+source ./timing.tcl
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+Information: Loading library 'scx3_cmos8rf_lpvt_tt_1p2v_25c' data due to accessing lib cells not linked in the current design. (LNK-041)
+1
+1
+set rpt_file "${top_level}.pt.rpt"
+cmem.pt.rpt
+check_timing
+Information: Building multi voltage information for entire design. (MV-022)
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+check_timing succeeded.
+1
+report_design >> ${rpt_file}
+report_reference >> ${rpt_file}
+report_constraint >> ${rpt_file}
+report_constraint -all_violators -significant_digits 6 >> ${top_level}.constraints.report
+report_timing -significant_digits 6 -delay_type min_max >> ${rpt_file}
+set power_analysis_mode "time_based"
+time_based
+read_vcd "../../qsim_dc/cmem/cmem.vcd" -strip_path "testbench/DUT"
+
+======================================================================
+Summary:
+Total number of nets = 111
+Number of annotated nets = 111 (100.00%)
+Total number of leaf cells = 53
+Number of fully annotated leaf cells = 53 (100.00%)
+======================================================================
+
+1
+report_switching_activity >> ${rpt_file}
+report_switching_activity -list_not_annotated >> ${rpt_file}
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/qsim_dc/cmem/cmem.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time = 5050.589000 ns 
+Information: analysis is done for time window (0ns - 10290ns)
+
+Information: Total simulation time = 10290.000000 ns
+1
+report_power >> ${rpt_file}
+report_power -hierarchy -verbose >> ${rpt_file}
+write_sdf -context verilog "./cmem.pt.sdf"
+****************************************
+Report : write_sdf ./cmem.pt.sdf
+Design : cmem
+Version: U-2022.12-SP5
+Date   : Sun Nov 24 20:27:42 2024
+****************************************
+
+1
+quit
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'rpt_file'. (CMD-041)
+Information: Defining new variable 'clk_uncertainty'. (CMD-041)
+Information: Defining new variable 'clk_period'. (CMD-041)
+Information: Defining new variable 'clk_port'. (CMD-041)
+Information: Defining new variable 'typical_wire_load'. (CMD-041)
+Information: Defining new variable 'typical_output_delay'. (CMD-041)
+Information: Defining new variable 'top_level'. (CMD-041)
+Information: Defining new variable 'verilog_files'. (CMD-041)
+Information: Defining new variable 'typical_input_delay'. (CMD-041)
+Information: Defining new variable 'clk_transition'. (CMD-041)
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 3184.49 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 7 seconds
+Diagnostics summary: 1 warning, 18 informationals
+
+Thank you for using pt_shell!
