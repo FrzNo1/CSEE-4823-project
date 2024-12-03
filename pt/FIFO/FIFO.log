@@ -1,0 +1,268 @@
+
+                                 PrimeTime (R)
+
+               Version U-2022.12-SP5 for linux64 - Jul 14, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+#################################################
+# Primetime 
+# Script for static timing analysis
+# MS 7/2015
+#################################################
+#################################################
+# Units are defined in the .lib file
+# time: ns
+#################################################
+## Global
+set sh_enable_page_mode true
+false
+set power_enable_analysis true
+Information: Checked out license 'PrimePower' (PT-019)
+true
+## Setting files/paths
+set verilog_files {../../dc/FIFO/FIFO.nl.v}
+../../dc/FIFO/FIFO.nl.v
+set my_toplevel FIFO
+FIFO
+set search_path ". /courses/ee6321/share/ibm13rflpvt/synopsys/"
+. /courses/ee6321/share/ibm13rflpvt/synopsys/
+set link_path "* scx3_cmos8rf_lpvt_tt_1p2v_25c.db" 
+* scx3_cmos8rf_lpvt_tt_1p2v_25c.db
+## Read design
+read_db "scx3_cmos8rf_lpvt_tt_1p2v_25c.db"
+Loading db file '/courses/ee6321/share/ibm13rflpvt/synopsys/scx3_cmos8rf_lpvt_tt_1p2v_25c.db'
+1
+read_verilog $verilog_files
+1
+link_design FIFO
+Loading verilog file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/dc/FIFO/FIFO.nl.v'
+Linking design FIFO...
+Information: 501 (95.07%) library cells are unused in library scx3_cmos8rf_lpvt_tt_1p2v_25c..... (LNK-045)
+Information: total 501 library cells are unused (LNK-046)
+Design 'FIFO' was successfully linked.
+Information: There are 6252 leaf cells, ports, hiers and 6185 nets in the design (LNK-047)
+1
+## Timing Constraints
+source ./timing.tcl
+Warning: Collection '_sel3 ([get_clocks  { {clk} }])' has inappropriate type (clock). (SEL-002)
+Error: Nothing matched for port_list (SEL-005)
+Information: Loading library 'scx3_cmos8rf_lpvt_tt_1p2v_25c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Warning: Setting input delay on clock port (clk) relative to a clock (clk) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+###################################################
+## Run STA 
+###################################################
+set rpt_file "./FIFO_pt.rpt"
+./FIFO_pt.rpt
+check_timing
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Warning: There are 1090 endpoints which are not constrained for maximum delay.
+
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Warning: There are 1090 register clock pins with no clock.
+
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+0
+report_design >> ${rpt_file}
+report_reference >> ${rpt_file}
+report_constraint >> ${rpt_file}
+report_constraint -all_violators -significant_digits 4 >> ${rpt_file}
+report_timing -significant_digits 4 -delay_type min_max >> ${rpt_file}
+## Power analysis
+set power_analysis_mode "time_based"
+time_based
+read_vcd "../../qsim_dc/FIFO/FIFO.vcd" -strip_path "testbench/FIFO"
+
+======================================================================
+Summary:
+Total number of nets = 6185
+Number of annotated nets = 6185 (100.00%)
+Total number of leaf cells = 6164
+Number of fully annotated leaf cells = 6164 (100.00%)
+======================================================================
+
+1
+report_switching_activity >> ${rpt_file}
+report_switching_activity -list_not_annotated >> ${rpt_file}
+update_power
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/homes/user/stud/fall23/rf2715/CSEE-4823-project/qsim_dc/FIFO/FIFO.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+ Last event time = 2480001.185000 ns  Last event time = 4045000.559000 ns  Last event time = 5865000.927000 ns  Last event time = 7115001.329000 ns  Last event time = 7835000.931000 ns  Last event time = 9200000.861000 ns  Last event time = 9745001.422000 ns  Last event time = 10700000.374000 ns  Last event time = 11635000.927000 ns  Last event time = 12080000.605000 ns  Last event time = 13525002.446000 ns  Last event time = 13645000.766000 ns  Last event time = 15275001.675000 ns  Last event time = 15515001.473000 ns  Last event time = 16590000.000000 ns  Last event time = 17405000.927000 ns  Last event time = 18000000.863000 ns  Last event time = 19295000.751000 ns  Last event time = 19440000.712000 ns  Last event time = 21430001.757000 ns  Last event time = 23195001.664000 ns  Last event time = 24605000.606000 ns  Last event time = 26000000.712000 ns  Last event time = 26545000.927000 ns  Last event time = 27630000.966000 ns  Last event time = 28425000.559000 ns  Last event time = 28630002.156000 ns  Last event time = 30000000.605000 ns  Last event time = 30345001.422000 ns  Last event time = 30475001.422000 ns 
+Information: analysis is done for time window (0ns - 3.112e+07ns)
+
+Information: Total simulation time = 31120000.000000 ns
+1
+report_power >> ${rpt_file}
+report_power -hierarchy  >> ${rpt_file}
+write_sdf -context verilog "./FIFO.sdf"
+****************************************
+Report : write_sdf ./FIFO.sdf
+Design : FIFO
+Version: U-2022.12-SP5
+Date   : Mon Dec  2 21:41:31 2024
+****************************************
+
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069032 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050161.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_1_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_4_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115672.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124606 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294359.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615220 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_7_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.157590 to 9.163461.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.176606 to 9.145985.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.619967 to 6.309475.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.630353 to 6.299101.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_0_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_2_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_5_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_8_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069032 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050161.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_42_Y_reg_1_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_11_Y_reg_3_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.240745 to 9.119306.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.402853 to 9.053770.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 5.982531.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615225 to 5.964667.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.380142 to 8.984285.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.380142 to 8.984285.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.335389 to 9.158418.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_49_Y_reg_6_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.335389 to 9.158418.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_48_Y_reg_10_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'SN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.757008 to 9.309047.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_55_Y_reg_10_' for the arc between pins 'CKN' and 'RN' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.763895 to 9.206151.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_9_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 8.069043 to 9.115720.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_9_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 8.124660 to 9.050175.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_9_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the minimum hold value has been adjusted from 3.597361 to 6.294363.  (SDF-036)
+Warning: The sum of the setup and hold values in the cell 'fifo_interface_SREG_23_Y_reg_9_' for the arc between pins 'CKN' and 'D' is negative, which is not allowed. To make it positive, the maximum hold value has been adjusted from 3.615224 to 6.276520.  (SDF-036)
+Note - message 'SDF-036' default limit (100) exceeded.  Remainder will be suppressed.
+1
+# Exiting primetime
+quit
+Information: Defining new variable 'clk_name'. (CMD-041)
+Information: Defining new variable 'rpt_file'. (CMD-041)
+Information: Defining new variable 'clk_uncertainty'. (CMD-041)
+Information: Defining new variable 'clk_period'. (CMD-041)
+Information: Defining new variable 'clk_port'. (CMD-041)
+Information: Defining new variable 'my_toplevel'. (CMD-041)
+Information: Defining new variable 'typical_wire_load'. (CMD-041)
+Information: Defining new variable 'typical_output_delay'. (CMD-041)
+Information: Defining new variable 'verilog_files'. (CMD-041)
+Information: Defining new variable 'typical_input_delay'. (CMD-041)
+Information: Defining new variable 'clk_transition'. (CMD-041)
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+SDF-036     Warning              8575         8475
+Total 1 type of message is suppressed
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 3210.58 MB
+CPU usage for this session: 8 seconds 
+Elapsed time for this session: 8 seconds
+Diagnostics summary: 1 error, 103 warnings, 18 informationals
+
+Thank you for using pt_shell!

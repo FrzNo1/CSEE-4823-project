@@ -1,0 +1,108 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/homes/user/stud/fall23/rf2715/CSEE-4823-project/qsim_rtl/FIFO
+vFIFO
+Z1 2../../rtl/FIFO/FIFO.v
+Z2 !s10a 1733192663
+Z3 !s110 1733192739
+!i10b 1
+!s100 QgMVf`8PBAW70S8BG0CT?2
+I9cGNeFWQaKUliQ8CE9^_:0
+R0
+Z4 w1733192663
+Z5 8../../rtl/FIFO/FIFO.v
+Z6 F../../rtl/FIFO/FIFO.v
+!i122 0
+L0 706 144
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OP;L;2024.2;79
+r1
+!s85 0
+31
+Z9 !s108 1733192739.000000
+Z10 !s107 ../../rtl/FIFO/FIFO.v|
+Z11 !s90 -reportprogress|300|+acc|-incr|../../rtl/FIFO/FIFO.v|
+!i113 1
+Z12 o+acc
+Z13 tCvgOpt 0
+n@f@i@f@o
+vfifo_interface
+R1
+R2
+R3
+!i10b 1
+!s100 b4aVzbREjaLJX6=fED=343
+I6a[eo<OS;eHoc1hMNCiH@2
+R0
+R4
+R5
+R6
+!i122 0
+L0 36 669
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vrshiftregne
+R1
+R2
+R3
+!i10b 1
+!s100 z3Xe@k?nESk@3W=:V>72o1
+I3]k@9HT]kA5?>WVmdQF:k0
+R0
+R4
+R5
+R6
+!i122 0
+L0 3 32
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vtestbench
+2tb_FIFO.v
+!s10a 1733192682
+R3
+!i10b 1
+!s100 EnRH?MK]]<fQ977D@Q5m82
+I@ggVhNfF@m0h_dnj7NBRZ3
+R0
+w1733192682
+8tb_FIFO.v
+Ftb_FIFO.v
+!i122 1
+L0 8 86
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 tb_FIFO.v|
+!s90 -reportprogress|300|+acc|-incr|tb_FIFO.v|
+!i113 1
+R12
+R13
